@@ -2,7 +2,10 @@ const mongoose = require('mongoose')
 
 // schema defines the shape of our documents
 const fruitSchema = new mongoose.Schema({
-	name: String,
+	name: {
+		type: String, 
+		required: true,
+	},
 	isReadyToEat: Boolean
 })
 
